@@ -20,9 +20,9 @@ public class numberControllerTest {
 
     @Test
     public void sendGetRequestToDouble() throws Exception {
-        this.mockMvc.perform(get("/double?number=5"))
+        this.mockMvc.perform(get("/double?number=3"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("10")));
+                .andExpect(content().string(containsString("6")));
     }
 }

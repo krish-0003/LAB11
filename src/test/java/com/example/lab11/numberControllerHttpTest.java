@@ -14,7 +14,7 @@ public class numberControllerHttpTest {
 
     @Test
     public void sendGetRequestToDouble() {
-        ResponseEntity<Integer> response = restTemplate.getForEntity("/double?number={number}", Integer.class, 3);
-        assertThat(response.getBody()).isEqualTo(6);
+        ResponseEntity<Integer> response = restTemplate.getForEntity("/double?number={number}", Integer.class, 5);
+        assertThat(response.getBody()).isEqualTo(10);
     }
 }
